@@ -28,7 +28,7 @@ public class PalindromeNumber {
         while (x > reverse) {
             //reverse左移位并加上x最低位
             reverse = reverse * 10 + x % 10;
-            //x右移位
+            //x右移位(Math.floor)
             x = x / 10;
         }
 
