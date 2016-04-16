@@ -1,12 +1,6 @@
 package linkedlist;
 
-/**
- * Description:
- * <p>
- * ======================
- * by WhiteBlue
- * on 16/4/3
- */
+
 public class LinkedNode {
     public int value;
     public LinkedNode next;
