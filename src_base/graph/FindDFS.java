@@ -12,6 +12,7 @@ public class FindDFS {
     public int find(Node start, Node end) {
         Set<Node> visited = new HashSet<>();
 
+        //栈
         LinkedList<Node> list = new LinkedList<>();
         list.push(start);
 

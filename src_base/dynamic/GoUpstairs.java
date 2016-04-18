@@ -26,6 +26,7 @@ public class GoUpstairs {
 
     /**
      * 动态规划
+     * 其实也可以用fib做
      *
      * @param n count
      * @return int

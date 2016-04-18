@@ -13,7 +13,7 @@ public class FindBFS {
     public int find(Node start, Node end) {
         Set<Node> visited = new HashSet<>();
 
-        //list
+        //队列
         LinkedList<Node> list = new LinkedList<>();
 
         list.addLast(start);
