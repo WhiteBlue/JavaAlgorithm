@@ -44,7 +44,7 @@ public class TreeInfo {
      * @param n           top floor(1)
      * @return count
      */
-    public int countNodeByLevel(TreeNode node, int targetLevel, int n) {
+    public int countNodeByLevel(TreeNode node, int n, int targetLevel) {
         //空节点返回
         if (node == null) {
             return 0;
