@@ -3,11 +3,6 @@
 > 堆在本地的历史遗物 ,传上来督促自己写代码
 
 
-![logo](logo.png)
-
-
-> Generate by [O'reilly-generator](https://github.com/jinwyp/oreilly-generator)
-
 ## 目录
 ==
 
