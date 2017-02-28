@@ -1,6 +1,3 @@
-package part2.divide_two_integers;
-
-
 /**
  * id: 29
  * <p>
@@ -9,9 +6,38 @@ package part2.divide_two_integers;
  */
 public class DivideTwoInteger {
 
+    public int divide(int dividend, int divisor) {
+        long sum = 0;
+        long newDividend = Math.abs((long) dividend);
+        long newDivisor = Math.abs((long) divisor);
 
-//    public int divide(int dividend, int divisor) {
-//
-//    }
+        while (newDividend >= newDivisor) {
+            long innerSum = newDivisor;
+            long innerShift = 1;
+
+            while ((innerSum << 1) < newDividend) {
+                innerSum <<= 1;
+                innerShift <<= 1;
+            }
+
+            sum += innerShift;
+
+            newDividend -= innerSum;
+        }
+
+        sum = (((dividend ^ divisor) >>> 31) == 0x00000001) ? -sum : sum;
+
+        if (sum > Integer.MAX_VALUE) {
+            sum = Integer.MAX_VALUE;
+        }
+        return (int) sum;
+    }
+
+
+    public static void main(String args[]) {
+        DivideTwoInteger d = new DivideTwoInteger();
+
+        System.out.println(d.divide(3455, 1));
+    }
 
 }
