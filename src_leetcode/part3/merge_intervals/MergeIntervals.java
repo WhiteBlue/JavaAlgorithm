@@ -23,13 +23,6 @@ class Interval {
         end = e;
     }
 
-    @Override
-    public String toString() {
-        return "Interval{" +
-                "start=" + start +
-                ", end=" + end +
-                '}';
-    }
 }
 
 public class MergeIntervals {
