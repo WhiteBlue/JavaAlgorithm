@@ -9,17 +9,17 @@
 #         self.right = None
 
 class Solution(object):
-    def buildTree(self,nums,start,end):
+    def buildTree(self, nums, start, end):
         if start > end:
             return None
         if start == end:
             return TreeNode(nums[start])
-        mid=(start+end)/2
-        left=self.buildTree(nums,start,mid-1)
-        node=TreeNode(nums[mid])
-        right=self.buildTree(nums,mid+1,end)
-        node.left=left
-        node.right=right
+        mid = (start + end) / 2
+        left = this.buildTree(nums, start, mid - 1)
+        node = TreeNode(nums[mid])
+        right = this.buildTree(nums, mid + 1, end)
+        node.left = left
+        node.right = right
 
         return node
 
@@ -29,4 +29,4 @@ class Solution(object):
         :rtype: TreeNode
         """
 
-        return self.buildTree(nums,0,len(nums)-1)
+        return self.buildTree(nums, 0, len(nums) - 1)
