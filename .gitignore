@@ -1,12 +1,5 @@
-
-out
-
 .idea
-
-src_base/Test.java
-src_leetcode/Main.java
-
-*.iml
-
-
 test
+
+node_modules
+package.json
