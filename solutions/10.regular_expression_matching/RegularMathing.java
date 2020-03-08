@@ -4,8 +4,8 @@ package part1.regular_expression_matching;
  * id: 10
  * <p>
  * Implement regular expression matching with support for '.' and '*'.
- */
-public class RegularMathing {
+ */ e
+public class Solution {
 
     //@todo not passed
     public boolean isMatch(String s, String p) {
