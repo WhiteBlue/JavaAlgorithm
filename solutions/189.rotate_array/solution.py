@@ -1,25 +1,20 @@
 from typing import List
 
-# @todo not passed
+
 class Solution:
+    def reverse(self, nums, start, end):
+        while start < end:
+            nums[start], nums[end] = nums[end], nums[start]
+            start += 1
+            end -= 1
+
     def rotate(self, nums: List[int], k: int) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
-
-        if k == len(nums) - 1:
-            k -= 1
-
-        for _ in range(k + 1):
-            for i in range(1, len(nums)):
-                nums[i], nums[i - 1] = nums[i - 1], nums[i]
-
-
-if __name__ == '__main__':
-    s = Solution()
-
-    arr = [1, 2, 3, 4, 5, 6]
-
-    s.rotate(arr, 1)
-
-    print(arr)
+        l = len(nums)
+        if k >= l:
+            k = k % l
+        self.reverse(nums, 0, l - 1)
+        self.reverse(nums, 0, k - 1)
+        self.reverse(nums, k, l - 1)
